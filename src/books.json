@@ -1,0 +1,60 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "description": "The Alchemist is the magical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure as extravagant as any ever found. From his home in Spain he journeys to the markets of Tangiers and across the Egyptian desert to a fateful encounter with the alchemist.",
+      "episodes": [
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/Alchemist_1.mp3?alt=media&token=020d20b3-3a3c-4947-95ab-11c33d30f63d=media&token=020d20b3-3a3c-4947-95ab-11c33d30f63d",
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/Alchemist_2.mp3?alt=media&token=bdd97497-7f16-4429-989d-462342c3d311",
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/Alchemist_3.mp3?alt=media&token=e1fafdcb-2574-42ea-9f9d-57dd8e50d8a0",
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/Alchemist_4.mp3?alt=media&token=a4e5b617-eedd-47ba-8f22-d1b49892c319",
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/Alchemist_6.mp3?alt=media&token=3553b589-8961-4111-90e6-f1f8520ca1f7"
+      ],
+      "photo": "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/alchemist_cover.jpg?alt=media&token=0facb77b-1e88-4dbb-ad69-b4582be0bbcd",
+      "placeholder": "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/alchemist-cover-placeholder.jpg?alt=media&token=e36cd4e1-1e96-4c5f-8264-23a1a3792520",
+      "released": "April 25, 1993"
+    },
+    {
+      "id": 2,
+      "title": "Seto Bagh",
+      "author": "Diamond Shumsher Rana",
+      "description": "'Seto Bagh', meaning 'White Tiger', 1973, revolves around the life of the Jagat Jung Rana, the eldest son of Jung Bahadur Rana. The plot is set around the time when Jung Bahadur Rana was in power and after his demise. The novel describes Jung Bahadur Rana losing his grip over the control of the palace and also the fall of his sons and the rise of his nephews to power. However, the novel is like a sequel to Diamond’s previous novel ‘Basanti’ where he wrote about the rise of Jung Bahadur along with his love life. Seto Bagh is more like a biography of Jagat Jung.",
+      "episodes": [
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/seto-bagh1.mp3?alt=media&token=a4533cca-8bc9-4add-bc5f-fe8af6360f11",
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/seto-bagh2.mp3?alt=media&token=f79931a9-e022-444d-9291-c7be6c226df7",
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/seto-bagh3.mp3?alt=media&token=d6de7904-92a1-4f42-8abb-fdcbbaa9c98d",
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/seto-bagh4.mp3?alt=media&token=7b566f78-f3c0-4030-94d3-e4a16197f4be"
+      ],
+      "photo": "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/seto-bagh.jpg?alt=media&token=6f90f61f-227e-499d-b98b-8d4ef8bf18fc",
+      "placeholder": "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/seto-bagh-placeholder.jpg?alt=media&token=493a9219-236a-42e8-a7f4-1c8471e45ce5",
+      "released": "1973"
+    },
+    {
+      "id": 3,
+      "title": "Pagal Basti",
+      "author": "Sarubhakta",
+      "description": "Sarubhatka is the pen name of Bhakta Raj Shrestha, a celebrated Nepalese novelist and poet and a winner of Madan Puraskaar, the most prestigious literary honour in Nepal for this book. This book presents a very unique example of different story, story presentation, characterization and writing style in Nepali literature. It is an experimental writing in Nepali literature.",
+      "episodes": [
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/pagalbasti1.mp3?alt=media&token=4df1d8f5-ac4a-4f97-ae1f-5b398f57ae02",
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/pagalbasti2.mp3?alt=media&token=158dda5d-5b16-46a2-b01c-e1f316619c27",
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/pagalbasti3.mp3?alt=media&token=28a43d4a-517d-4971-ba9e-d460934c7574",
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/pagalbasti4.mp3?alt=media&token=bd31bb12-9a67-4f9d-9e3e-33d503b99bb5",
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/pagalbasti5.mp3?alt=media&token=4d5173ab-37b1-42d7-a47f-a889153df621",
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/pagalbasti6.mp3?alt=media&token=8f7f9b6d-57e4-4948-940f-25eaaa68a06b",
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/pagalbasti7.mp3?alt=media&token=de59d2ba-ba4c-43d6-b004-6a3964c57dd2",
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/pagalbasti8.mp3?alt=media&token=5f567921-36df-4659-a2d7-a05245394957",
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/pagalbasti9.mp3?alt=media&token=3d98f48b-0992-41b8-b52f-ad1d26d2c97b",
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/pagalbasti10.mp3?alt=media&token=ac134155-2caa-4960-a129-4152da19508f",
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/pagalbasti11.mp3?alt=media&token=5a8b50f0-2673-47c2-b04d-134096d3b03a",
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/pagalbasti12.mp3?alt=media&token=52306e43-36c6-4050-bf4e-1e4e0bee7a31",
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/pagalbasti13.mp3?alt=media&token=d4196f8b-e4b6-4083-a77c-2a0d0b2125ef",
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/pagalbasti14.mp3?alt=media&token=c3372cc0-5e04-4d49-916c-af52ea541188"
+      ],
+      "photo": "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/pagal-basti.jpg?alt=media&token=95e83c2a-859d-40bb-ac63-f5faed7ee955",
+      "placeholder": "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/pagal-basti-placeholder.jpg?alt=media&token=0a01783b-7a2c-457b-8707-d39a75058e78",
+      "released": "1991"
+    }
+  ]
+}
