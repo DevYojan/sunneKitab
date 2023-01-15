@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import LazyLoad from 'react-lazy-load';
 
 import BooksJSON from '../books.json';
 
@@ -40,15 +39,19 @@ const Books = () => {
         <div className='card'>
           <div className='card-image'>
             <figure className='image is-4by5'>
-              <LazyLoad offset={300}>
-                <img src={bookToShow.photo} alt={bookToShow.title} className='bookCover' />
-              </LazyLoad>
+              <img
+                src={bookToShow.photo}
+                alt={bookToShow.title}
+                className='bookCover'
+                loading='lazy'
+                key={bookToShow.title}
+              />
             </figure>
           </div>
           <div className='card-content'>
             <div className='content'>
               <p className='title is-4'>{bookToShow.title}</p>
-              <p className='icon-text subtitle is-5'>
+              <p className='icon-text subtitle is-5 author'>
                 <span className='icon'>
                   <i className='fa-solid fa-pen-nib'></i>
                 </span>

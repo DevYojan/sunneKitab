@@ -14,7 +14,8 @@ body {
 }
 
 img {
-  max-width: 100%;
+  /* max-width: 100%; */
+  object-fit: fill;
 }
 
 .books {
@@ -156,8 +157,12 @@ table th {
     font-size: 3em;
   }
 
+  .card-content .content .author {
+    font-size: 0.9em;
+  }
+
   .books {
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: space-around;
   }
 }
