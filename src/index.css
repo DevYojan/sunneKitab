@@ -18,6 +18,11 @@ img {
   object-fit: fill;
 }
 
+.bookCover {
+  background-image: url('./placeholder.png');
+  background-size: cover;
+}
+
 .books {
   display: flex;
   flex-wrap: wrap;
