@@ -142,8 +142,8 @@ const Book = () => {
 
   return (
     <div className='book'>
-      <h1 className='title is-3 has-text-centered'>{book.title}</h1>
-      <p className='icon-text subtitle is-5'>
+      <h1 className='title is-3 has-text-centered bookTitle'>{book.title}</h1>
+      <p className='icon-text subtitle authorAndDuration'>
         <span className='icon'>
           <i className='fa-solid fa-pen-nib'></i>
         </span>
@@ -151,17 +151,9 @@ const Book = () => {
         total 3.5 hrs with {book.episodes.length} episodes
       </p>
 
-      <p className='subtitle is-6'>Released on {book.released}</p>
+      <p className='subtitle releasedDate'>Released on {book.released}</p>
       <p>{book.description}</p>
       <div className='player'>
-        {/* <figure>
-          <figcaption>
-            Playing <strong>The Alchemist</strong> episode 1.
-          </figcaption>
-          <audio controls src={require('../alchemist_1.mp3')}>
-            <a href={require('../alchemist_1.mp3')}>Download</a>
-          </audio>
-        </figure> */}
         <audio preload='auto'>
           <source src={currentEpisode.url} key={currentEpisode.index} type='audio/mpeg' />
         </audio>
@@ -174,24 +166,27 @@ const Book = () => {
           </div>
           <span className='totalTime'> {audioFile ? formatTime(audioFile.duration) : '00:00'}</span>
         </div>
-        <div className='volumeWrapper' id='volumeWrapper' hidden>
-          <span className='volumeCounter'>{Math.floor(volume * 100)}</span>
-          <input
-            className='volumeSlider'
-            type='range'
-            value={volume}
-            min='0'
-            max='1'
-            step='0.01'
-            onChange={(e) => controlPlayer('volumeChange', e)}
-          />
-        </div>
+
         <div className='controls'>
-          <i
-            className='fa-solid fa-volume-low'
-            title='Adjust Volume'
-            onClick={() => toggleVolumeSlider()}
-          ></i>
+          <span className='volumeControl'>
+            <i
+              className='fa-solid fa-volume-low'
+              title='Adjust Volume'
+              onClick={() => toggleVolumeSlider()}
+            ></i>
+            <div className='volumeWrapper' id='volumeWrapper' hidden>
+              <span className='volumeCounter'>{Math.floor(volume * 100)}</span>
+              <input
+                className='volumeSlider'
+                type='range'
+                value={volume}
+                min='0'
+                max='1'
+                step='0.01'
+                onChange={(e) => controlPlayer('volumeChange', e)}
+              />
+            </div>
+          </span>
           <i
             className='fa-solid fa-backward-step'
             title='Previous'
