@@ -211,4 +211,17 @@ table th {
     flex-direction: column;
     align-items: center;
   }
+
+  .footer {
+    margin-top: 1.5em;
+    padding-bottom: 1em;
+  }
+
+  .container {
+    padding: 1em 1em;
+  }
+
+  .description {
+    text-align: justify;
+  }
 }

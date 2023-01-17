@@ -152,7 +152,7 @@ const Book = () => {
       </p>
 
       <p className='subtitle releasedDate'>Released on {book.released}</p>
-      <p>{book.description}</p>
+      <p className='description'>{book.description}</p>
       <div className='player'>
         <audio preload='auto'>
           <source src={currentEpisode.url} key={currentEpisode.index} type='audio/mpeg' />
