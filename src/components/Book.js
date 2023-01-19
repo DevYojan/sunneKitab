@@ -22,9 +22,8 @@ const Book = () => {
     return minutes + ':' + seconds;
   };
 
-  const handleSelectedColorRemoval = (e) => {
-    e.preventDefault();
-    let selected = document.querySelector(`#${e.currentTarget.id}`);
+  const handleSelectedColorRemoval = (id) => {
+    let selected = document.querySelector(`#${id}`);
     let previouslyActive = document.querySelector(`#epi${currentEpisode.index}`);
     previouslyActive.classList.remove('is-selected');
     selected.classList.add('is-selected');
@@ -81,7 +80,6 @@ const Book = () => {
         setisPlaying(true);
 
         if (currentEpisode.index == 0) {
-          console.log('here');
           let selected = document.querySelector('#epi0');
           selected.classList.add('is-selected');
         }
@@ -99,6 +97,7 @@ const Book = () => {
         if (currentEpisode.index === playlist.length - 1) return;
 
         audio.src = playlist[Number(currentEpisode.index + 1)];
+        handleSelectedColorRemoval(`epi${currentEpisode.index + 1}`);
         setCurrentEpisode({ index: Number(currentEpisode.index + 1), url: audio.src });
         audio.play();
         setisPlaying(true);
@@ -108,6 +107,7 @@ const Book = () => {
         //If current episode is first episode do nothing;
         if (currentEpisode.index == 0) return;
 
+        handleSelectedColorRemoval(`epi${currentEpisode.index - 1}`);
         audio.src = playlist[Number(currentEpisode.index - 1)];
         setCurrentEpisode({ index: Number(currentEpisode.index - 1), url: audio.src });
         audio.play();
@@ -231,7 +231,7 @@ const Book = () => {
                   key={episode}
                   id={`epi${index}`}
                   onClick={(e) => {
-                    handleSelectedColorRemoval(e);
+                    handleSelectedColorRemoval(`epi${index}`);
                     setCurrentEpisode({ index, url: episode });
                     controlPlayer('selectSong');
                   }}
