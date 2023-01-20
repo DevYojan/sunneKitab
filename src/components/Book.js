@@ -114,6 +114,8 @@ const Book = () => {
         return;
 
       case 'rewind20sec':
+        if (!isPlaying) return;
+
         if (audio.currentTime - 20 >= 0) {
           audio.currentTime = audio.currentTime - 20;
           return;
@@ -122,6 +124,8 @@ const Book = () => {
         return (audio.currentTime = 0);
 
       case 'forward20sec':
+        if (!isPlaying) return;
+
         if (audio.currentTime + 20 <= audio.duration) {
           audio.currentTime = audio.currentTime + 20;
           return;

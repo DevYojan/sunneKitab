@@ -55,6 +55,55 @@
       "photo": "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/pagal-basti.jpg?alt=media&token=95e83c2a-859d-40bb-ac63-f5faed7ee955",
       "placeholder": "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/pagal-basti-placeholder.jpg?alt=media&token=0a01783b-7a2c-457b-8707-d39a75058e78",
       "released": "1991"
+    },
+    {
+      "id": 4,
+      "title": "Siddartha",
+      "author": "Hermann Hesse",
+      "description": "Siddhartha: An Indian novel is a 1922 novel by Hermann Hesse that deals with the spiritual journey of self-discovery of a man named Siddhartha during the time of the Gautama Buddha. The book, Hesse's 9th novel, was written in German, in a simple, lyrical style. It was published in the U.S. in 1951 and became influential during the 1960s. Hesse dedicated the first part of it to Romain Rolland and the second part to Wilhelm Gundert, his cousin.",
+      "episodes": [
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/siddartha1.mp3?alt=media&token=20bdd834-25ff-4cdb-8f23-67556ec4baef",
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/siddartha2.mp3?alt=media&token=f22cf7ad-2ce6-4f0b-9dc3-bb17c16a78f0",
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/siddartha3.mp3?alt=media&token=e2b8134c-ae29-440a-a500-cec1575282e3",
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/siddartha4.mp3?alt=media&token=9811b5ea-0ea3-4603-838f-6b9cc0fbeaee",
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/siddartha5.mp3?alt=media&token=3168dd38-5c00-4787-98a8-d6ffcc59f4dd",
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/siddartha6.mp3?alt=media&token=85d5ab20-1467-4d20-88e1-787f84614704",
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/siddartha7.mp3?alt=media&token=dcbf7df2-2a24-456e-a7f8-af3a1abc3545",
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/siddartha8.mp3?alt=media&token=cd7d704a-7ae5-40ef-a929-a9e9fb4bd2c0",
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/siddartha9.mp3?alt=media&token=2ba0c54f-c09b-4a5e-ac6b-c9c2715cf946",
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/siddartha10.mp3?alt=media&token=24f93281-41bd-4414-86d1-baea9d15a05b",
+        "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/siddartha11.mp3?alt=media&token=67ac677f-ae7e-44a6-a789-362a3baad7d7"
+      ],
+      "photo": "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/siddarthaCover.jpg?alt=media&token=b15f219b-21ab-4111-8043-dec577bbb25e",
+      "placeholder": "",
+      "released": "1922"
+    },
+    {
+      "id": 5,
+      "title": "Desh Le Hareko Yuddha",
+      "author": "Harka Khadayat",
+      "description": "Describes the condition within and aftermath of maoist insurgency.",
+      "episodes": [
+        "https://archive.org/download/02-deshle-hareko-yuddha-karka-khayadat-www.ashishdanai.com.np/01-deshleHarekoYuddha_karkaKhayadat_www.ashishdanai.com.np.mp3",
+        "https://archive.org/download/02-deshle-hareko-yuddha-karka-khayadat-www.ashishdanai.com.np/02-deshleHarekoYuddha_karkaKhayadat_www.ashishdanai.com.np.mp3",
+        "https://archive.org/download/02-deshle-hareko-yuddha-karka-khayadat-www.ashishdanai.com.np/03-deshleHarekoYuddha_karkaKhayadat_www.ashishdanai.com.np.mp3",
+        "https://archive.org/download/02-deshle-hareko-yuddha-karka-khayadat-www.ashishdanai.com.np/04-deshleHarekoYuddha_harkaKhadayat_www.ashishdanai.com.np.mp3",
+        "https://archive.org/download/02-deshle-hareko-yuddha-karka-khayadat-www.ashishdanai.com.np/05-deshleHarekoYuddha_harkaKhadayat_www.ashishdanai.com.np.mp3",
+        "https://archive.org/download/02-deshle-hareko-yuddha-karka-khayadat-www.ashishdanai.com.np/06-deshleHarekoYuddha_harkaKhadayat_lastEpisode_www.ashishdanai.com.np.mp3"
+      ],
+      "photo": "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/deshleharekoyuddha.jpg?alt=media&token=b9804d01-ce9e-4157-b559-259d62babc19",
+      "placeholder": "",
+      "released": "2012"
+    },
+    {
+      "id": 6,
+      "title": "Tin Ghumti",
+      "author": "B.P Koirala",
+      "description": "Set during the Panchayat regime, it is the story of a Newar girl of Kathmandu Indramaya (Garima Panta), who falls in love with Pitambar (Dhruba Dutta), from a Brahmin family. Though inter-caste marriage was not socially and culturally acceptable then, the duo get married. Also a political activist, Pitambar is then jailed for going against the Panchayat System and the king.",
+      "episodes": ["https://archive.org/download/tin-ghumti/Tin-Ghumti.mp4"],
+      "photo": "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/tinGhumti.jpg?alt=media&token=94b87dd0-9956-4e63-836f-21543b398624",
+      "placeholder": "",
+      "released": "1968"
     }
   ]
 }
