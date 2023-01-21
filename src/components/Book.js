@@ -9,6 +9,7 @@ const Book = () => {
   const [currentEpisode, setCurrentEpisode] = useState({ index: 0, url: playlist[0] });
   const [audioFile, setAudioFile] = useState(null);
   const [isPlaying, setisPlaying] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [currentTime, setCurrentTime] = useState('00:00');
   const [timeoutId, setTimeoutId] = useState(null);
   const [volume, setVolume] = useState(0.5);
@@ -47,6 +48,11 @@ const Book = () => {
     return;
   };
 
+  const toggleLoadingStatus = () => {
+    console.log(isLoading);
+    setIsLoading(!isLoading);
+  };
+
   const controlPlayer = (action, event) => {
     let audio = document.querySelector('audio');
     let progressSection = document.querySelector('.progress_filled');
@@ -71,7 +77,7 @@ const Book = () => {
     setInterval(() => {
       setCurrentTime(formatTime(audio.currentTime));
       const flexPercentage = (audio.currentTime / audio.duration) * 100;
-      progressSection.style.flexBasis = `${flexPercentage}%`;
+      // progressSection.style.flexBasis = `${flexPercentage}%`;
     }, 500);
 
     switch (action) {
@@ -95,7 +101,7 @@ const Book = () => {
         //If current episode is last episode do nothing;
 
         if (currentEpisode.index === playlist.length - 1) return;
-
+        toggleLoadingStatus();
         audio.src = playlist[Number(currentEpisode.index + 1)];
         handleSelectedColorRemoval(`epi${currentEpisode.index + 1}`);
         setCurrentEpisode({ index: Number(currentEpisode.index + 1), url: audio.src });
@@ -106,7 +112,7 @@ const Book = () => {
       case 'previous':
         //If current episode is first episode do nothing;
         if (currentEpisode.index == 0) return;
-
+        toggleLoadingStatus();
         handleSelectedColorRemoval(`epi${currentEpisode.index - 1}`);
         audio.src = playlist[Number(currentEpisode.index - 1)];
         setCurrentEpisode({ index: Number(currentEpisode.index - 1), url: audio.src });
@@ -134,6 +140,7 @@ const Book = () => {
         return (audio.currentTime = audio.duration);
 
       case 'selectSong':
+        toggleLoadingStatus();
         audio.src = currentEpisode.url;
         audio.play();
         setisPlaying(true);
@@ -158,16 +165,28 @@ const Book = () => {
       <p className='subtitle releasedDate'>Released on {book.released}</p>
       <p className='description'>{book.description}</p>
       <div className='player'>
-        <audio preload='auto'>
+        <audio preload='auto' onLoadedData={toggleLoadingStatus}>
           <source src={currentEpisode.url} key={currentEpisode.index} type='audio/mpeg' />
         </audio>
         <span className='nowPlaying title is-6'>Episode {currentEpisode.index + 1}</span>
 
         <div className='progressBar'>
           <span className='currentTime'>{currentTime} &nbsp;&nbsp;</span>
-          <div className='progress'>
-            <div className='progress_filled'></div>
-          </div>
+          {isLoading ? (
+            <div className='animation'>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          ) : (
+            <div className='progress'>
+              <div className='progress_filled'></div>
+            </div>
+          )}
           <span className='totalTime'> {audioFile ? formatTime(audioFile.duration) : '00:00'}</span>
         </div>
 

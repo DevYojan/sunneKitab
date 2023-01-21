@@ -104,6 +104,33 @@
       "photo": "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/tinGhumti.jpg?alt=media&token=94b87dd0-9956-4e63-836f-21543b398624",
       "placeholder": "",
       "released": "1968"
+    },
+    {
+      "id": 7,
+      "title": "Radha",
+      "author": "Krishna Dharabasi",
+      "description": "Radha represents an example of an outstanding nepali novel. This Novel is written by Krishna Dharabasi. It plots the story of ancient epic Mahabharat with some changes that are not included in that epic. However the character Radha is very famous for the love relationship with Krishna in Hindu religion, she has been left far behind in the story of Mahabharat. Dharabasi starts his own story of Radha where the epic has left her. The plot of Radha resembles with the situation of Nepal at the time of its publiation. In Radha, Mr. Dharabasi tried to picture the scenario of Nepal at the time of People’s war of Maoist.",
+      "episodes": [
+        "https://archive.org/download/radha_2/radha_1.mp3",
+        "https://archive.org/download/radha_2/radha_2.mp3",
+        "https://archive.org/download/radha_2/Radha_Krishna%20Dharabasi%2C%20episode%203.mp3",
+        "https://archive.org/download/radha_2/Radha_Krishna%20Dharabasi%2C%20episode%204.mp3",
+        "https://archive.org/download/radha_2/Radha_Krishna%20Dharabasi%2C%20episode%205.mp3",
+        "https://archive.org/download/radha_2/Radha_Krishna%20Dharabasi%2C%20episode%206.mp3",
+        "https://archive.org/download/radha_2/Radha_Krishna%20Dharabasi%2C%20episode%207.mp3",
+        "https://archive.org/download/radha_2/Radha_Krishna%20Dharabasi%2C%20episode%208.mp3",
+        "https://archive.org/download/radha_2/Radha_Krishna%20Dharabasi%2C%20episode%209.mp3",
+        "https://archive.org/download/radha_2/radha_10.mp3",
+        "https://archive.org/download/radha_2/radha_11.mp3",
+        "https://archive.org/download/radha_2/radha_12.mp3",
+        "https://archive.org/download/radha_2/radha_13.mp3",
+        "https://archive.org/download/radha_2/radha_14.mp3",
+        "https://archive.org/download/radha_2/radha_15.mp3",
+        "https://archive.org/download/radha_2/radha_16.mp3"
+      ],
+      "photo": "https://firebasestorage.googleapis.com/v0/b/sunnekitab-b6f58.appspot.com/o/radha.jpg?alt=media&token=caadb237-906a-4afc-b4bb-d1cb0c14edb2",
+      "placeholder": "",
+      "released": "2005"
     }
   ]
 }
