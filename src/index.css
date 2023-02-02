@@ -33,7 +33,7 @@ img {
 .header {
   display: flex;
   align-items: flex-end;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   justify-content: space-between;
   flex-wrap: nowrap;
 }
