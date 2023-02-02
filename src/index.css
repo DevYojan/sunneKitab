@@ -14,8 +14,33 @@ body {
 }
 
 img {
-  /* max-width: 100%; */
   object-fit: fill;
+}
+
+.logo {
+  background-image: url('./logo.png');
+  background-size: cover;
+  height: 58px;
+  width: 65px;
+}
+
+.logoTitle {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 15px;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
 }
 
 .bookCover {
@@ -152,6 +177,10 @@ table th {
 .pagination-icons:hover {
   color: #3a4cf0;
   cursor: pointer;
+}
+
+.searchBox {
+  margin-bottom: 0.8em;
 }
 
 /* media queries */

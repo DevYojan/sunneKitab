@@ -1,12 +1,15 @@
 import { Link } from 'react-router-dom';
+import Search from './Search';
 
 const Header = () => {
   return (
-    <Link to='/'>
-      <div className='heading'>
-        <h1 className='title is-1 has-text-centered'>Sunne Kitab</h1>
-      </div>
-    </Link>
+    <div className='header'>
+      <Link to='/' className='logoTitle'>
+        <div className='logo'></div>
+        <h3 className='title'>Sunne Kitaab</h3>
+      </Link>
+      <Search />
+    </div>
   );
 };
 

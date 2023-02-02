@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Book from './components/Book';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Search from './components/Search';
 import { useEffect } from 'react';
 
 function App() {
