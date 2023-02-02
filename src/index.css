@@ -198,9 +198,24 @@ table th {
     justify-content: space-around;
   }
 
+  .bookAndNav {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    margin-bottom: 1.4em;
+  }
+
+  .empty,
+  .goBack {
+    flex: 1;
+  }
+
+  .fa-arrow-left {
+    color: #363636;
+  }
+
   .book .bookTitle {
     font-size: 1.4em;
-    margin-bottom: 1.4em;
   }
 
   .book .authorAndDuration,

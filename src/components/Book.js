@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Book = () => {
   const location = useLocation();
@@ -153,7 +154,13 @@ const Book = () => {
 
   return (
     <div className='book'>
-      <h1 className='title is-3 has-text-centered bookTitle'>{book.title}</h1>
+      <div className='bookAndNav'>
+        <Link to='/' className='goBack'>
+          <i className='fa-solid fa-arrow-left'></i>
+        </Link>
+        <h1 className='title is-3 has-text-centered bookTitle'>{book.title}</h1>
+        <span className='empty'></span>
+      </div>
       <p className='icon-text subtitle authorAndDuration'>
         <span className='icon'>
           <i className='fa-solid fa-pen-nib'></i>
