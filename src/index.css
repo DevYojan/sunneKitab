@@ -211,6 +211,56 @@ table th {
   align-items: center;
 }
 
+.empty,
+.goBack {
+  flex: 1;
+
+  cursor: pointer;
+}
+
+.fa-arrow-left {
+  color: #363636;
+}
+
+.bookAndNav {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  margin-bottom: 1.4em;
+}
+
+.footer {
+  margin-top: 1.5em;
+  padding-bottom: 1em;
+}
+
+@media (min-width: 600px) {
+  body {
+    max-width: 50%;
+    margin: 0 auto;
+    box-shadow: 9px 9px 18px #bcbcbc, -9px -9px 18px #ffffff;
+    padding: 0 1em 0 1em;
+  }
+
+  .books {
+    justify-content: center;
+  }
+
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .progress {
+    min-width: 18em;
+  }
+
+  .progressBar {
+    justify-content: center;
+  }
+}
+
 /* media queries */
 @media (max-width: 40em) {
   .title.is-1 {
@@ -224,22 +274,6 @@ table th {
   .books {
     flex-wrap: nowrap;
     justify-content: space-around;
-  }
-
-  .bookAndNav {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: baseline;
-    margin-bottom: 1.4em;
-  }
-
-  .empty,
-  .goBack {
-    flex: 1;
-  }
-
-  .fa-arrow-left {
-    color: #363636;
   }
 
   .book .bookTitle {
@@ -336,11 +370,6 @@ table th {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  .footer {
-    margin-top: 1.5em;
-    padding-bottom: 1em;
   }
 
   .container {

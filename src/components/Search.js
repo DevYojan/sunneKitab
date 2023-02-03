@@ -9,6 +9,7 @@ const Search = () => {
   const { topSearchedBooks } = location.state;
 
   const [search, setSearch] = useState('');
+  const [searchMessage, setSearchMessage] = useState('');
   const [searchResult, setSearchResult] = useState(topSearchedBooks);
 
   const handleSearch = (e) => {
@@ -25,6 +26,11 @@ const Search = () => {
       (book) =>
         book.title.toLowerCase().includes(keyword) || book.author.toLowerCase().includes(keyword)
     );
+
+    if (foundBooks.length === 0) {
+      setSearchMessage(`Sorry ${search} could not be found. Try searching some other books.`);
+    }
+
     setSearchResult(foundBooks);
   };
 
@@ -49,7 +55,8 @@ const Search = () => {
             autoFocus
           />
         </p>
-        <h4 className='title is-4'>Top Searches</h4>
+        <span className='searchMessage'>{searchMessage}</span>
+        <h4 className='title is-4'>{}Top Searches</h4>
 
         <div className='topBooks'>
           {searchResult.map((book) => (
