@@ -1,10 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
-import BooksJSON from '../books.json';
-
-const Books = () => {
-  const books = BooksJSON.books;
+const Books = ({ books }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [bookToShow, setBookToShow] = useState(books[0]);
 

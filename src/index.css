@@ -183,6 +183,26 @@ table th {
   margin-bottom: 0.8em;
 }
 
+.media {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 1em;
+  color: #363636;
+}
+
+.topBooks .media .media-left .image img {
+  height: 80px;
+  width: 192px;
+}
+
+.searchContent {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /* media queries */
 @media (max-width: 40em) {
   .title.is-1 {

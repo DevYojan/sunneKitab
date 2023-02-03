@@ -8,7 +8,7 @@ const Header = () => {
         <div className='logo'></div>
         <h3 className='title'>Sunne Kitaab</h3>
       </Link>
-      <Search />
+      {/* <Search /> */}
     </div>
   );
 };
