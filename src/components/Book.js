@@ -50,7 +50,6 @@ const Book = () => {
   };
 
   const toggleLoadingStatus = () => {
-    console.log(isLoading);
     setIsLoading(!isLoading);
   };
 

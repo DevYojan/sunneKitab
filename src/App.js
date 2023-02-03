@@ -8,14 +8,19 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Search from './components/Search';
 
+import BooksJSON from './books.json';
+
 function App() {
+  const books = BooksJSON.books;
+
   return (
     <div className='container'>
       <Router>
-        <Header />
+        <Header books={books} />
         <Routes>
           <Route path='/book' element={<Book />} />
           <Route path='/' element={<Home />} />
+          <Route path='/search' element={<Search />} />
         </Routes>
         <Footer />
       </Router>

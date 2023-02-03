@@ -1,7 +1,13 @@
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
-const Search = ({ topSearchedBooks, books }) => {
+const Search = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { books } = location.state;
+  const { topSearchedBooks } = location.state;
+
   const [search, setSearch] = useState('');
   const [searchResult, setSearchResult] = useState(topSearchedBooks);
 
@@ -22,14 +28,14 @@ const Search = ({ topSearchedBooks, books }) => {
     setSearchResult(foundBooks);
   };
 
+  const goBack = () => {
+    navigate(-1);
+  };
+
   return (
     <>
-      {/* <i className='fa-solid fa-magnifying-glass fa-2x'></i> */}
-
       <div className='searchDiv'>
-        <Link to='/' className='goBack'>
-          <i className='fa-solid fa-arrow-left'></i>
-        </Link>
+        <i className='fa-solid fa-arrow-left goBack' onClick={goBack}></i>
         <p className='control has-icons-left'>
           <span className='icon is-small is-left'>
             <i className='fas fa-magnifying-glass'></i>

@@ -153,7 +153,7 @@ table th {
 .fa-backward:hover,
 .fa-forward:hover,
 .fa-forward-step:hover {
-  color: #3a4cf0;
+  color: #00d1b2;
 }
 
 .volumeWrapper {
@@ -175,7 +175,7 @@ table th {
 }
 
 .pagination-icons:hover {
-  color: #3a4cf0;
+  color: #00d1b2;
   cursor: pointer;
 }
 
@@ -194,6 +194,10 @@ table th {
 .topBooks .media .media-left .image img {
   height: 80px;
   width: 192px;
+}
+
+.fa-magnifying-glass {
+  color: #363636;
 }
 
 .searchContent {
