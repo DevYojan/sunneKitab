@@ -53,6 +53,14 @@ const Book = () => {
     setIsLoading(!isLoading);
   };
 
+  const toggleActiveColor = (event) => {
+    event.target.classList.add('active');
+    console.log(event.target.classList);
+    setTimeout(() => {
+      event.target.classList.remove('active');
+    }, 1000);
+  };
+
   const controlPlayer = (action, event) => {
     let audio = document.querySelector('audio');
     let progressSection = document.querySelector('.progress_filled');
@@ -80,10 +88,17 @@ const Book = () => {
       // progressSection.style.flexBasis = `${flexPercentage}%`;
     }, 500);
 
+    toggleActiveColor(event);
+
     switch (action) {
       case 'play':
         audio.play();
         setisPlaying(true);
+
+        event.target.classList.add('active');
+        setTimeout(() => {
+          event.target.classList.remove('active');
+        }, 3000);
 
         if (currentEpisode.index == 0) {
           let selected = document.querySelector('#epi0');
@@ -112,6 +127,7 @@ const Book = () => {
       case 'previous':
         //If current episode is first episode do nothing;
         if (currentEpisode.index == 0) return;
+
         toggleLoadingStatus();
         handleSelectedColorRemoval(`epi${currentEpisode.index - 1}`);
         audio.src = playlist[Number(currentEpisode.index - 1)];
@@ -201,7 +217,7 @@ const Book = () => {
             <i
               className='fa-solid fa-volume-low'
               title='Adjust Volume'
-              onClick={() => toggleVolumeSlider()}
+              onClick={(e) => toggleVolumeSlider(e)}
             ></i>
             <div className='volumeWrapper' id='volumeWrapper' hidden>
               <span className='volumeCounter'>{Math.floor(volume * 100)}</span>
@@ -219,31 +235,35 @@ const Book = () => {
           <i
             className='fa-solid fa-backward-step'
             title='Previous'
-            onClick={() => controlPlayer('previous')}
+            onClick={(e) => controlPlayer('previous', e)}
           ></i>
           <i
             className='fa-solid fa-backward'
             title='Rewind 30 sec'
-            onClick={() => controlPlayer('rewind20sec')}
+            onClick={(e) => controlPlayer('rewind20sec', e)}
           ></i>
           {isPlaying ? (
             <i
               className='fa-solid fa-pause'
               title='pause'
-              onClick={() => controlPlayer('pause')}
+              onClick={(e) => controlPlayer('pause', e)}
             ></i>
           ) : (
-            <i className='fa-solid fa-play' title='play' onClick={() => controlPlayer('play')}></i>
+            <i
+              className='fa-solid fa-play'
+              title='play'
+              onClick={(e) => controlPlayer('play', e)}
+            ></i>
           )}
           <i
             className='fa-solid fa-forward'
             title='Forward 30 sec'
-            onClick={() => controlPlayer('forward20sec')}
+            onClick={(e) => controlPlayer('forward20sec', e)}
           ></i>
           <i
             className='fa-solid fa-forward-step'
             title='Next'
-            onClick={() => controlPlayer('next')}
+            onClick={(e) => controlPlayer('next', e)}
           ></i>
         </div>
 

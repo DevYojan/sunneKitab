@@ -145,7 +145,7 @@ table th {
   cursor: pointer;
 }
 
-.fa-volume-high:hover,
+/* .fa-volume-high:hover,
 .fa-volume-low:hover,
 .fa-play:hover,
 .fa-pause:hover,
@@ -154,7 +154,7 @@ table th {
 .fa-forward:hover,
 .fa-forward-step:hover {
   color: #00d1b2;
-}
+} */
 
 .volumeWrapper {
   display: flex;
@@ -177,6 +177,10 @@ table th {
 .pagination-icons:hover {
   color: #00d1b2;
   cursor: pointer;
+}
+
+.active {
+  color: #00d1b2;
 }
 
 .searchBox {
