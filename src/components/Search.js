@@ -9,7 +9,7 @@ const Search = () => {
   const { topSearchedBooks } = location.state;
 
   const [search, setSearch] = useState('');
-  const [searchMessage, setSearchMessage] = useState('');
+  const [searchMessage, setSearchMessage] = useState(1);
   const [searchResult, setSearchResult] = useState(topSearchedBooks);
 
   const handleSearch = (e) => {
@@ -18,6 +18,7 @@ const Search = () => {
     //setting results to top Searched books if input field is empty
     if (e.target.value === '') {
       setSearchResult(topSearchedBooks);
+      setSearchMessage(1);
       return;
     }
 
@@ -28,10 +29,16 @@ const Search = () => {
     );
 
     if (foundBooks.length === 0) {
-      setSearchMessage(`Sorry ${search} could not be found. Try searching some other books.`);
+      setSearchMessage(
+        `Meri Ammai Ni. We don't have '${e.target.value}'. Try searching some other books or authors.`
+      );
+
+      setSearchResult(topSearchedBooks);
+      return;
     }
 
-    setSearchResult(foundBooks);
+    setSearchResult(foundBooks.slice(0, 4));
+    setSearchMessage('');
   };
 
   const goBack = () => {
@@ -55,8 +62,10 @@ const Search = () => {
             autoFocus
           />
         </p>
-        <span className='searchMessage'>{searchMessage}</span>
-        <h4 className='title is-4'>{}Top Searches</h4>
+        <span className='searchMessage'>{searchMessage !== 1 ? searchMessage : ''}</span>
+        <h4 className='title is-4'>
+          {searchMessage === '' && searchMessage !== 1 ? 'Search Result' : 'Top Searched Books'}
+        </h4>
 
         <div className='topBooks'>
           {searchResult.map((book) => (
