@@ -2,8 +2,10 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 const Books = ({ books }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [bookToShow, setBookToShow] = useState(books[0]);
+  const [currentIndex, setCurrentIndex] = useState(
+    Math.floor(Math.random() * (Math.floor(books.length) - 0 + 1) + 0)
+  );
+  const [bookToShow, setBookToShow] = useState(books[currentIndex]);
 
   const nextBook = () => {
     //If pagination reaches last book reset pagination
@@ -47,8 +49,8 @@ const Books = ({ books }) => {
           </div>
           <div className='card-content'>
             <div className='content'>
-              <p className='title is-4'>{bookToShow.title}</p>
-              <p className='icon-text subtitle is-5 author'>
+              <p className='title is-5'>{bookToShow.title}</p>
+              <p className='icon-text subtitle is-6 author'>
                 <span className='icon'>
                   <i className='fa-solid fa-pen-nib'></i>
                 </span>
