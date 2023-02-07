@@ -183,6 +183,10 @@ table th {
   color: #00d1b2;
 }
 
+.description {
+  text-align: justify;
+}
+
 .searchBox {
   margin-bottom: 0.8em;
 }
@@ -375,9 +379,5 @@ table th {
 
   .container {
     padding: 1em 1em;
-  }
-
-  .description {
-    text-align: justify;
   }
 }
