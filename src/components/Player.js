@@ -132,7 +132,7 @@ const Player = ({ book, playlist }, ref) => {
       case 'rewind20sec':
         if (!isPlaying) return;
 
-        toggleLoadingStatus();
+        if (!isLoading) toggleLoadingStatus();
 
         if (audio.currentTime - 20 >= 0) {
           audio.currentTime = audio.currentTime - 20;
@@ -144,7 +144,7 @@ const Player = ({ book, playlist }, ref) => {
       case 'forward20sec':
         if (!isPlaying) return;
 
-        toggleLoadingStatus();
+        if (!isLoading) toggleLoadingStatus();
 
         if (audio.currentTime + 20 <= audio.duration) {
           audio.currentTime = audio.currentTime + 20;

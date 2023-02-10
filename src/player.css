@@ -106,7 +106,7 @@ table th {
   transform: rotate(180deg);
 }
 .animation span {
-  width: 1.5em;
+  /* width: 1.5em; */
   margin: 0 2px;
   background: #9e9e9e;
   /* border-radius: 6px; */
@@ -211,5 +211,9 @@ table th {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .animation span {
+    width: 1.5em;
   }
 }
