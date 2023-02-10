@@ -67,11 +67,16 @@ img {
 .card {
   background: #e0e0e0;
   box-shadow: 9px 9px 18px #bcbcbc, -9px -9px 18px #ffffff;
+  width: 230px;
 }
 
 .card:hover {
   border-bottom-right-radius: 50px;
   border-top-left-radius: 50px;
+}
+
+.episodes {
+  margin-top: -9px;
 }
 
 .subtitle {
@@ -153,6 +158,10 @@ img {
 
   .books {
     justify-content: center;
+  }
+
+  .card {
+    width: 250px;
   }
 }
 

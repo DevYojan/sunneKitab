@@ -56,7 +56,7 @@ const Books = ({ books }) => {
                 </span>
                 {bookToShow.author}
               </p>
-              <p className='subtitle is-6'>total 15hrs with 18 episodes</p>
+              <span className='subtitle is-6 episodes'>{bookToShow.episodes.length} episodes</span>
             </div>
           </div>
         </div>
