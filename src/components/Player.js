@@ -132,6 +132,8 @@ const Player = ({ book, playlist }, ref) => {
       case 'rewind20sec':
         if (!isPlaying) return;
 
+        toggleLoadingStatus();
+
         if (audio.currentTime - 20 >= 0) {
           audio.currentTime = audio.currentTime - 20;
           return;
@@ -141,6 +143,8 @@ const Player = ({ book, playlist }, ref) => {
 
       case 'forward20sec':
         if (!isPlaying) return;
+
+        toggleLoadingStatus();
 
         if (audio.currentTime + 20 <= audio.duration) {
           audio.currentTime = audio.currentTime + 20;
@@ -164,7 +168,7 @@ const Player = ({ book, playlist }, ref) => {
   return (
     <>
       <div className='player'>
-        <audio preload='auto' onLoadedData={toggleLoadingStatus}>
+        <audio preload='auto' onLoadedData={toggleLoadingStatus} onSeeked={toggleLoadingStatus}>
           <source src={currentEpisode.url} key={currentEpisode.index} type='audio/mpeg' />
         </audio>
         <span className='nowPlaying title is-6'>Episode {currentEpisode.index + 1}</span>

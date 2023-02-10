@@ -173,6 +173,10 @@ table th {
     margin-left: -3em;
     border-radius: 0;
   }
+
+  .animation span {
+    width: 2em;
+  }
 }
 
 @media (max-width: 40em) {
