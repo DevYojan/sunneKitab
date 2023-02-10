@@ -1,10 +1,13 @@
-import { useLocation } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
+import { useState } from 'react';
+
 import Player from './Player';
 
 const Book = () => {
   const location = useLocation();
   const { book } = location.state;
+
+  const [playlist, setPlaylist] = useState(book.episodes);
 
   return (
     <div className='book'>
@@ -25,7 +28,7 @@ const Book = () => {
 
       <p className='subtitle releasedDate'>Released on {book.released}</p>
       <p className='description'>{book.description}</p>
-      <Player book={book} />
+      <Player book={book} playlist={playlist} />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import { useState } from 'react';
+import Playlist from './Playlist';
 
-const Player = ({ book }) => {
-  const [playlist, setPlaylist] = useState(book.episodes);
+const Player = ({ book, playlist }, ref) => {
   const [currentEpisode, setCurrentEpisode] = useState({ index: 0, url: playlist[0] });
   const [audioFile, setAudioFile] = useState(null);
   const [isPlaying, setisPlaying] = useState(false);
@@ -162,112 +162,95 @@ const Player = ({ book }) => {
   };
 
   return (
-    <div className='player'>
-      <audio preload='auto' onLoadedData={toggleLoadingStatus}>
-        <source src={currentEpisode.url} key={currentEpisode.index} type='audio/mpeg' />
-      </audio>
-      <span className='nowPlaying title is-6'>Episode {currentEpisode.index + 1}</span>
+    <>
+      <div className='player'>
+        <audio preload='auto' onLoadedData={toggleLoadingStatus}>
+          <source src={currentEpisode.url} key={currentEpisode.index} type='audio/mpeg' />
+        </audio>
+        <span className='nowPlaying title is-6'>Episode {currentEpisode.index + 1}</span>
 
-      <div className='progressBar'>
-        <span className='currentTime'>{currentTime} &nbsp;&nbsp;</span>
-        {isLoading ? (
-          <div className='animation'>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        ) : (
-          <div className='progress'>
-            <div className='progress_filled'></div>
-          </div>
-        )}
-        <span className='totalTime'> {audioFile ? formatTime(audioFile.duration) : '00:00'}</span>
-      </div>
+        <div className='progressBar'>
+          <span className='currentTime'>{currentTime} &nbsp;&nbsp;</span>
+          {isLoading ? (
+            <div className='animation'>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          ) : (
+            <div className='progress'>
+              <div className='progress_filled'></div>
+            </div>
+          )}
+          <span className='totalTime'> {audioFile ? formatTime(audioFile.duration) : '00:00'}</span>
+        </div>
 
-      <div className='controls'>
-        <span className='volumeControl'>
+        <div className='controls'>
+          <span className='volumeControl'>
+            <i
+              className='fa-solid fa-volume-low'
+              title='Adjust Volume'
+              onClick={(e) => toggleVolumeSlider(e)}
+            ></i>
+            <div className='volumeWrapper' id='volumeWrapper' hidden>
+              <span className='volumeCounter'>{Math.floor(volume * 100)}</span>
+              <input
+                className='volumeSlider'
+                type='range'
+                value={volume}
+                min='0'
+                max='1'
+                step='0.01'
+                onChange={(e) => controlPlayer('volumeChange', e)}
+              />
+            </div>
+          </span>
           <i
-            className='fa-solid fa-volume-low'
-            title='Adjust Volume'
-            onClick={(e) => toggleVolumeSlider(e)}
+            className='fa-solid fa-backward-step'
+            title='Previous'
+            onClick={(e) => controlPlayer('previous', e)}
           ></i>
-          <div className='volumeWrapper' id='volumeWrapper' hidden>
-            <span className='volumeCounter'>{Math.floor(volume * 100)}</span>
-            <input
-              className='volumeSlider'
-              type='range'
-              value={volume}
-              min='0'
-              max='1'
-              step='0.01'
-              onChange={(e) => controlPlayer('volumeChange', e)}
-            />
-          </div>
-        </span>
-        <i
-          className='fa-solid fa-backward-step'
-          title='Previous'
-          onClick={(e) => controlPlayer('previous', e)}
-        ></i>
-        <i
-          className='fa-solid fa-backward'
-          title='Rewind 20 sec'
-          onClick={(e) => controlPlayer('rewind20sec', e)}
-        ></i>
-        {isPlaying ? (
           <i
-            className='fa-solid fa-pause'
-            title='pause'
-            onClick={(e) => controlPlayer('pause', e)}
+            className='fa-solid fa-backward'
+            title='Rewind 20 sec'
+            onClick={(e) => controlPlayer('rewind20sec', e)}
           ></i>
-        ) : (
+          {isPlaying ? (
+            <i
+              className='fa-solid fa-pause'
+              title='pause'
+              onClick={(e) => controlPlayer('pause', e)}
+            ></i>
+          ) : (
+            <i
+              className='fa-solid fa-play'
+              title='play'
+              onClick={(e) => controlPlayer('play', e)}
+            ></i>
+          )}
           <i
-            className='fa-solid fa-play'
-            title='play'
-            onClick={(e) => controlPlayer('play', e)}
+            className='fa-solid fa-forward'
+            title='Forward 20 sec'
+            onClick={(e) => controlPlayer('forward20sec', e)}
           ></i>
-        )}
-        <i
-          className='fa-solid fa-forward'
-          title='Forward 20 sec'
-          onClick={(e) => controlPlayer('forward20sec', e)}
-        ></i>
-        <i
-          className='fa-solid fa-forward-step'
-          title='Next'
-          onClick={(e) => controlPlayer('next', e)}
-        ></i>
+          <i
+            className='fa-solid fa-forward-step'
+            title='Next'
+            onClick={(e) => controlPlayer('next', e)}
+          ></i>
+        </div>
       </div>
-
-      <div className='playlist'>
-        <table className='table is-striped is-hoverable is-fullwidth'>
-          <thead>
-            <tr>
-              <th>Episodes</th>
-            </tr>
-          </thead>
-          <tbody>
-            {playlist.map((episode, index) => (
-              <tr
-                key={episode}
-                id={`epi${index}`}
-                onClick={(e) => {
-                  handleSelectedColorRemoval(`epi${index}`);
-                  setCurrentEpisode({ index, url: episode });
-                  controlPlayer('selectSong');
-                }}
-              >
-                <td>Episode {index + 1}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
+      <Playlist
+        playlist={book.episodes}
+        handleSelectedColorRemoval={handleSelectedColorRemoval}
+        setCurrentEpisode={setCurrentEpisode}
+        controlPlayer={controlPlayer}
+      />
+    </>
   );
 };
 
