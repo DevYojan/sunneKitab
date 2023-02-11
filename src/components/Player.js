@@ -171,7 +171,12 @@ const Player = ({ book, playlist }, ref) => {
         <audio preload='auto' onLoadedData={toggleLoadingStatus} onSeeked={toggleLoadingStatus}>
           <source src={currentEpisode.url} key={currentEpisode.index} type='audio/mpeg' />
         </audio>
-        <span className='nowPlaying title is-6'>Episode {currentEpisode.index + 1}</span>
+        <span className='nowPlaying title is-6'>
+          Episode {currentEpisode.index + 1}{' '}
+          <a href={currentEpisode.url} download title='Download' target='_blank' rel='noreferrer'>
+            <i className='fa-solid fa-download' type='submit'></i>
+          </a>
+        </span>
 
         <div className='progressBar'>
           <span className='currentTime'>{currentTime} &nbsp;&nbsp;</span>
