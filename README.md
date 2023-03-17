@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+# Sunne Kitab
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Sunne Kitab](https://sunnekitab.netlify.app) is a web app made using ReactJS to listen and download audiobooks.
+![App Homepage](https://github.com/DevYojan/sunneKitab/blob/master/public/homepage.png?raw=true)
+ 
 
-## Available Scripts
+## What is this and who is this for?
+I love listening to audiobooks especially Nepali audiobooks and I searched online. The only option was an old WordPress site that used an inbuilt HTML audio component and it was hard to navigate. So I made this project for myself and for those who want to listen audiobooks online without having to download them first. Also, I added the option to download as well.
 
-In the project directory, you can run:
+## What I learned
+I learned a lot during this project. I struggled a lot to add lazy loading on the book cover images. After trying out a number of libraries, which didn't work on a carousel, I decided the best way to implement lazy loading for this project would be by simply adding a background-image CSS property. Also, I learned a lot by making my own music player using the audio API.
 
-### `npm start`
+## What I would do if I had more time
+Being an aspiring developer, I want to learn a plethora of things. So I am not able to give a lot of time to this project as much as I want. If I had more time I would add total number of hours each book has, book flip animation on homepage, and even a backend.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Contributing
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+As of now, I am not accepting any PRs. Feel free to download the project and add or remove features.
 
-### `npm test`
+## License
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Creative Commons Zero v1.0 Universal](http://creativecommons.org/licenses/by/1.0/)
